@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="nasi-prop-logo-nobg.png">
+  <title>Nasi Properties | Find Your Dream Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-black font-sans">
+  <!-- Top Info Bar -->
+  <div class="bg-[#0b2974] text-white text-sm md:px-8 px-4 py-4">
+    <div class="flex max-w-7xl mx-auto justify-between md:space-x-8">
+        <div class="hidden md:flex space-x-6">
+        <span class="flex items-center space-x-2">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@nasiproperties.co.za" class="hover:text-blue-200">info@nasiproperties.co.za</a>
+        </span>
+        <span class="flex items-center space-x-2">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>10 The Castle, 20 Castle Road, Assagay</span>
+        </span>
+        </div>
+        <div class="md:flex items-center space-x-4">
+        <a href="#" class="hover:text-blue-200"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-blue-200"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-200"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-blue-200"><i class="fa-brands fa-linkedin-in"></i></a>
+        <button class="bg-white text-[#0b2974] px-4 py-1 rounded ml-2 font-semibold hover:bg-blue-100 transition">Add Listing</button>
+        </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="max-w-7xl mx-auto flex justify-between items-center md:px-8 px-4 py-4">
+    <div class="flex items-center">
+      <img src="nasi-prop-logo-nobg.png" alt="Nasi Properties Logo" class="w-32">
+    </div>
+
+    <nav class="space-x-8 hidden md:flex items-center text-lg">
+      <a href="#" class="text-[#0b2974] font-bold">Buy</a>
+      <a href="#" class="hover:text-[#0b2974] font-semibold">Rent</a>
+      <a href="#" class="hover:text-[#0b2974] font-semibold">Sell</a>
+      <a href="#" class="hover:text-[#0b2974] font-semibold">About</a>
+      <a href="#" class="hover:text-[#0b2974] font-semibold">Blog</a>
+      <a href="#" class="hover:text-[#0b2974] font-semibold">Contact</a>
+    </nav>
+
+    <div class="flex items-center space-x-4">
+      <i class="fa-solid fa-magnifying-glass text-gray-600 cursor-pointer text-2xl"></i>
+      <i class="fa-solid fa-user text-gray-600 cursor-pointer hover:text-[#0b2974] text-2xl"></i>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section 
+    class="relative bg-cover bg-center text-white" 
+    style="background-image: url('hero.webp'); min-height: 60vh;">
+    
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-[#0b2974]/20"></div>
+
+    <div class="relative z-10 flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-24">
+      <div class="max-w-xl text-left">
+        <div class="flex items-center space-x-2 mb-4">
+          <i class="fa-solid fa-house text-blue-200"></i>
+          <span class="text-sm font-medium text-blue-100">Trusted Real Estate Agency</span>
+        </div>
+        <h1 class="text-5xl font-extrabold leading-tight mb-6">
+          Find Your Perfect <br> Home with <span class="text-blue-200">Nasi Properties</span>
+        </h1>
+        <p class="text-white mb-8 text-lg font-semibold leading-relaxed">
+             Experience. Integrity. Results.
+        </p>
+        <a href="#properties" class="bg-white text-[#0b2974] px-8 py-3 rounded font-semibold hover:bg-blue-100 transition">
+          Browse Listings
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property Search Section -->
+  <section class="relative max-w-7xl mx-auto bg-white shadow-lg mx-6 md:mx-20 rounded-xl p-6 md:p-10 -mt-12 z-20 items-center justify-center">
+    <form class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div>
+        <label class="block text-[#0b2974] font-medium mb-2">Location</label>
+        <input type="text" placeholder="Enter city or suburb"
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#0b2974] outline-none">
+    </div>
+
+    <div>
+        <label class="block text-[#0b2974] font-medium mb-2">Property Type</label>
+        <select
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#0b2974] outline-none">
+        <option>All Types</option>
+        <option>House</option>
+        <option>Apartment</option>
+        <option>Townhouse</option>
+        <option>Vacant Land</option>
+        </select>
+    </div>
+
+    <div>
+        <label class="block text-[#0b2974] font-medium mb-2">Price Range</label>
+        <select
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#0b2974] outline-none">
+        <option>Any</option>
+        <option>R500k – R1M</option>
+        <option>R1M – R2M</option>
+        <option>R2M – R5M</option>
+        <option>R5M+</option>
+        </select>
+    </div>
+
+    <div class="flex items-end">
+        <button type="submit"
+        class="bg-[#0b2974] text-white font-semibold w-full py-3 rounded-lg hover:bg-blue-900 transition">
+        Search
+        </button>
+    </div>
+    </form>
+  </section>
+
+  <!-- Services Tabs Section -->
+<section class="bg-[#f8faff] py-12">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-5 justify-between items-center text-center gap-6">
+
+    <!-- Card 1 -->
+    <div class="flex flex-col items-center text-[#0b2974] hover:text-[#1b4ad8] transition">
+      <i class="fa-solid fa-building-circle-check text-3xl mb-2"></i>
+      <span class="text-sm font-semibold tracking-wide">List Your Property</span>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flex flex-col items-center text-[#0b2974] hover:text-[#1b4ad8] transition">
+      <i class="fa-solid fa-envelope-open-text text-3xl mb-2"></i>
+      <span class="text-sm font-semibold tracking-wide">Email Alerts</span>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flex flex-col items-center text-[#0b2974] hover:text-[#1b4ad8] transition">
+      <i class="fa-solid fa-magnifying-glass-location text-3xl mb-2"></i>
+      <span class="text-sm font-semibold tracking-wide">Property Finder</span>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="flex flex-col items-center text-[#0b2974] hover:text-[#1b4ad8] transition">
+      <i class="fa-solid fa-user-tie text-3xl mb-2"></i>
+      <span class="text-sm font-semibold tracking-wide">Our Agents</span>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="flex flex-col items-center text-[#0b2974] hover:text-[#1b4ad8] transition">
+      <i class="fa-solid fa-calculator text-3xl mb-2"></i>
+      <span class="text-sm font-semibold tracking-wide">Bond Calculator</span>
+    </div>
+
+  </div>
+</section>
+
+   <!-- Featured Listings -->
+<section id="properties" class="py-16 bg-gray-50">
+  <div class="text-center mb-12">
+    <span class="text-sm uppercase tracking-widest text-blue-900 bg-blue-100 px-3 py-1 rounded-full">
+      Properties
+    </span>
+    <h2 class="text-4xl font-bold text-[#0b2974] mt-4">Featured Listings</h2>
+  </div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-10">
+    
+    <!-- Property Card 1 -->
+    <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+      <div class="relative">
+        <img src="hl1.jpg" alt="Seaside Home Umhlanga" class="w-full h-64 object-cover">
+        <span class="absolute top-4 right-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">FOR RENT</span>
+        <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white px-4 py-2 text-sm flex justify-between items-center">
+          <span><i class="fa-solid fa-location-dot mr-1"></i> Umhlanga Rocks, Durban</span>
+          <span class="flex items-center space-x-3">
+            <i class="fa-regular fa-image"></i><span>8</span>
+            <i class="fa-regular fa-video"></i><span>1</span>
+          </span>
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="text-[#0b2974] text-xl font-bold mb-1">R25,000<span class="text-gray-500 text-sm font-medium">/month</span></h3>
+        <p class="font-semibold mb-2">Modern Seaside Home</p>
+        <p class="text-gray-500 text-sm mb-4">
+          Spacious 3-bedroom home just a walk from Umhlanga Beach. Newly renovated kitchen, ocean views, and double garage.
+        </p>
+        <div class="flex justify-between text-sm text-gray-600 mb-4">
+          <span><i class="fa-solid fa-bed mr-1"></i> 3 Bedrooms</span>
+          <span><i class="fa-solid fa-bath mr-1"></i> 2 Bathrooms</span>
+          <span><i class="fa-regular fa-square mr-1"></i> 280 m²</span>
+        </div>
+        <div class="flex items-center justify-between border-t pt-4">
+          <div class="flex items-center space-x-2">
+            <img src="oledi.png" alt="Agent" class="w-8 h-8 rounded-full">
+            <div>
+              <p class="text-sm font-semibold text-[#0b2974]">Nolwazi Mdadane</p>
+              <p class="text-xs text-gray-500">Nasi Agent</p>
+            </div>
+          </div>
+          <div class="flex space-x-3 text-gray-500">
+            <i class="fa-regular fa-heart hover:text-[#0b2974] cursor-pointer"></i>
+            <i class="fa-solid fa-share-nodes hover:text-[#0b2974] cursor-pointer"></i>
+            <i class="fa-regular fa-bookmark hover:text-[#0b2974] cursor-pointer"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property Card 2 -->
+    <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+      <div class="relative">
+        <img src="hl2.jpg" alt="Luxury Apartment Ballito" class="w-full h-64 object-cover">
+        <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">FOR SALE</span>
+        <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white px-4 py-2 text-sm flex justify-between items-center">
+          <span><i class="fa-solid fa-location-dot mr-1"></i> Ballito Hills, KZN North Coast</span>
+          <span class="flex items-center space-x-3">
+            <i class="fa-regular fa-image"></i><span>6</span>
+            <i class="fa-regular fa-video"></i><span>2</span>
+          </span>
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="text-[#0b2974] text-xl font-bold mb-1">R8,500,000<span class="text-gray-500 text-sm font-medium">/once-off</span></h3>
+        <p class="font-semibold mb-2">Luxury Coastal Apartment</p>
+        <p class="text-gray-500 text-sm mb-4">
+          Elegant 2-bedroom apartment in Ballito with ocean views, pool access, and 24-hour security. Ideal for young professionals.
+        </p>
+        <div class="flex justify-between text-sm text-gray-600 mb-4">
+          <span><i class="fa-solid fa-bed mr-1"></i> 2 Bedrooms</span>
+          <span><i class="fa-solid fa-bath mr-1"></i> 2 Bathrooms</span>
+          <span><i class="fa-regular fa-square mr-1"></i> 165 m²</span>
+        </div>
+        <div class="flex items-center justify-between border-t pt-4">
+          <div class="flex items-center space-x-2">
+            <img src="oledi.png" alt="Agent" class="w-8 h-8 rounded-full">
+            <div>
+              <p class="text-sm font-semibold text-[#0b2974]">Nolwazi Mdadane</p>
+              <p class="text-xs text-gray-500">Nasi Agent</p>
+            </div>
+          </div>
+          <div class="flex space-x-3 text-gray-500">
+            <i class="fa-regular fa-heart hover:text-[#0b2974] cursor-pointer"></i>
+            <i class="fa-solid fa-share-nodes hover:text-[#0b2974] cursor-pointer"></i>
+            <i class="fa-regular fa-bookmark hover:text-[#0b2974] cursor-pointer"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property Card 3 -->
+    <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+      <div class="relative">
+        <img src="hl3.jpg" alt="Glenwood Townhouse" class="w-full h-64 object-cover">
+        <span class="absolute top-4 right-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">FOR RENT</span>
+        <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white px-4 py-2 text-sm flex justify-between items-center">
+          <span><i class="fa-solid fa-location-dot mr-1"></i> Glenwood, Durban</span>
+          <span class="flex items-center space-x-3">
+            <i class="fa-regular fa-image"></i><span>5</span>
+            <i class="fa-regular fa-video"></i><span>1</span>
+          </span>
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="text-[#0b2974] text-xl font-bold mb-1">R14,500<span class="text-gray-500 text-sm font-medium">/month</span></h3>
+        <p class="font-semibold mb-2">Glenwood Family Townhouse</p>
+        <p class="text-gray-500 text-sm mb-4">
+          Pet-friendly 3-bedroom townhouse with private garden and parking for two cars. Close to schools and shops.
+        </p>
+        <div class="flex justify-between text-sm text-gray-600 mb-4">
+          <span><i class="fa-solid fa-bed mr-1"></i> 3 Bedrooms</span>
+          <span><i class="fa-solid fa-bath mr-1"></i> 2 Bathrooms</span>
+          <span><i class="fa-regular fa-square mr-1"></i> 200 m²</span>
+        </div>
+        <div class="flex items-center justify-between border-t pt-4">
+          <div class="flex items-center space-x-2">
+            <img src="oledi.png" alt="Agent" class="w-8 h-8 rounded-full">
+            <div>
+              <p class="text-sm font-semibold text-[#0b2974]">Nolwazi Mdadane</p>
+              <p class="text-xs text-gray-500">Nasi Agent</p>
+            </div>
+          </div>
+          <div class="flex space-x-3 text-gray-500">
+            <i class="fa-regular fa-heart hover:text-[#0b2974] cursor-pointer"></i>
+            <i class="fa-solid fa-share-nodes hover:text-[#0b2974] cursor-pointer"></i>
+            <i class="fa-regular fa-bookmark hover:text-[#0b2974] cursor-pointer"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center mt-8">
+    <a href="#properties" class="bg-[#0b2974] text-centerhover:bg-[#0b2974] text-white px-8 py-3 rounded-lg font-semibold transition">
+          Browse All Listings
+        </a>
+    </div>
+</section>
+
+<section class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-[#0b2974] mb-10">
+      Explore Properties by Province
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- KwaZulu-Natal -->
+      <div class="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-3">KwaZulu-Natal</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Durban</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Pietermaritzburg</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Umhlanga</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Ballito</button>
+        </div>
+      </div>
+
+      <!-- Gauteng -->
+      <div class="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-3">Gauteng</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Johannesburg</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Pretoria</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Sandton</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Midrand</button>
+        </div>
+      </div>
+
+      <!-- Western Cape -->
+      <div class="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-3">Western Cape</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Cape Town</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Stellenbosch</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Paarl</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">George</button>
+        </div>
+      </div>
+
+      <!-- Eastern Cape -->
+      <div class="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-3">Eastern Cape</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Port Elizabeth</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">East London</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Mthatha</button>
+        </div>
+      </div>
+
+      <!-- Free State -->
+      <div class="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-3">Free State</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Bloemfontein</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Welkom</button>
+        </div>
+      </div>
+
+      <!-- Limpopo -->
+      <div class="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-3">Limpopo</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Polokwane</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Thohoyandou</button>
+        </div>
+      </div>
+
+      <!-- Mpumalanga -->
+      <div class="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-3">Mpumalanga</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Nelspruit</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Witbank</button>
+        </div>
+      </div>
+
+      <!-- North West -->
+      <div class="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-3">North West</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Rustenburg</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Mahikeng</button>
+        </div>
+      </div>
+
+      <!-- Northern Cape -->
+      <div class="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-3">Northern Cape</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Kimberley</button>
+          <button class="bg-[#0b2974] hover:bg-[#1b4ad8] text-white px-4 py-2 rounded-lg text-sm">Springbok</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Property News & Advice -->
+<section class="bg-[#f8faff] py-16">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="text-center mb-12">
+      <span class="text-sm uppercase tracking-widest text-blue-900 bg-blue-100 px-3 py-1 rounded-full">
+        Property Insights
+      </span>
+      <h2 class="text-4xl font-bold text-[#0b2974] mt-4">News & Advice</h2>
+      <p class="text-gray-600 mt-2">Stay informed with the latest market updates, buyer tips, and property trends.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Article 1 -->
+      <div class="bg-white rounded-2xl shadow hover:shadow-md transition overflow-hidden">
+        <img src="tips.jpg" alt="Buying Tips" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-[#0b2974] mb-2">Top 5 Tips for First-Time Home Buyers</h3>
+          <p class="text-gray-600 text-sm mb-4">Learn the key things to consider before purchasing your first property and how to avoid common mistakes.</p>
+          <a href="#" class="text-[#1b4ad8] font-semibold hover:underline">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="bg-white rounded-2xl shadow hover:shadow-md transition overflow-hidden">
+        <img src="trends.png" alt="Market Trends" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-[#0b2974] mb-2">South Africa’s Property Market Outlook 2025</h3>
+          <p class="text-gray-600 text-sm mb-4">Explore where the property market is heading and which provinces are showing the strongest growth.</p>
+          <a href="#" class="text-[#1b4ad8] font-semibold hover:underline">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="bg-white rounded-2xl shadow hover:shadow-md transition overflow-hidden">
+        <img src="value-property.jpg" alt="Home Value" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-[#0b2974] mb-2">How to Increase Your Property’s Value</h3>
+          <p class="text-gray-600 text-sm mb-4">Simple home improvements that can boost resale value and attract more potential buyers.</p>
+          <a href="#" class="text-[#1b4ad8] font-semibold hover:underline">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Subscription -->
+<section class="bg-[#0b2974] text-white py-16">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold mb-4">Subscribe for Property Tips & Updates</h2>
+    <p class="text-blue-100 mb-8">
+      Join our mailing list to receive exclusive property insights, buyer guides, and investment advice every month.
+    </p>
+    <form class="flex flex-col md:flex-row items-center justify-center gap-4">
+      <input 
+        type="email" 
+        placeholder="Enter your email address" 
+        class="w-full md:w-2/3 px-4 py-3 rounded-lg text-gray-800 focus:outline-none"
+        required>
+      <button 
+        type="submit" 
+        class="bg-white text-[#0b2974] font-semibold px-6 py-3 rounded-lg hover:bg-blue-100 transition">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#0b2974] text-white py-10">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+    
+    <!-- Logo & About -->
+    <div>
+      <img src="nasi-prop-logo-nobg.png" alt="Nasi Properties Logo" class="w-32 mb-4">
+      <p class="text-blue-100 text-sm leading-relaxed">
+        Nasi Properties connects buyers, sellers, and renters with trusted agents across South Africa.  
+        Your journey to the perfect home starts here.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="font-bold mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-blue-100">
+        <li><a href="#" class="hover:text-white">Buy</a></li>
+        <li><a href="#" class="hover:text-white">Rent</a></li>
+        <li><a href="#" class="hover:text-white">Sell</a></li>
+        <li><a href="#" class="hover:text-white">About Us</a></li>
+        <li><a href="#" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div>
+      <h3 class="font-bold mb-4">Resources</h3>
+      <ul class="space-y-2 text-sm text-blue-100">
+        <li><a href="#" class="hover:text-white">News & Advice</a></li>
+        <li><a href="#" class="hover:text-white">Bond Calculator</a></li>
+        <li><a href="#" class="hover:text-white">FAQs</a></li>
+        <li><a href="#" class="hover:text-white">Terms & Privacy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="font-bold mb-4">Get in Touch</h3>
+      <ul class="space-y-2 text-sm text-blue-100">
+        <li><i class="fa-solid fa-envelope mr-2"></i> info@nasiproperties.co.za</li>
+        <li><i class="fa-solid fa-phone mr-2"></i> +27 31 555 1234</li>
+        <li><i class="fa-solid fa-location-dot mr-2"></i> 10 The Castle, 20 Castle Road, Assagay</li>
+      </ul>
+      <div class="flex space-x-4 mt-4">
+        <a href="#" class="hover:text-blue-300"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-blue-300"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-300"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-blue-300"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-blue-800 mt-10 pt-6 text-center text-sm text-blue-200">
+    © <span id="year"></span> Nasi Properties. All rights reserved.
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
