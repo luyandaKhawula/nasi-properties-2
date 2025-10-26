@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="nasi-prop-logo-nobg.png">
+  <title>Nasi Properties | Find Your Dream Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-black font-sans">
+  <!-- Top Info Bar -->
+  <div class="bg-[#0b2974] text-white text-sm md:px-8 px-4 py-4">
+    <div class="flex max-w-7xl mx-auto justify-between md:space-x-8">
+        <div class="hidden md:flex space-x-6">
+        <span class="flex items-center space-x-2">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@nasiproperties.co.za" class="hover:text-blue-200">info@nasiproperties.co.za</a>
+        </span>
+        <span class="flex items-center space-x-2">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>10 The Castle, 20 Castle Road, Assagay</span>
+        </span>
+        </div>
+        <div class="md:flex items-center space-x-4">
+        <a href="#" class="hover:text-blue-200"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-blue-200"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-200"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-blue-200"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="list-your-property.html" class="bg-white text-[#0b2974] px-4 py-1 rounded ml-2 font-semibold hover:bg-blue-100 transition">Add Listing</a>
+        </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+<header class="max-w-7xl mx-auto flex justify-between items-center md:px-8 px-4 py-4 relative z-50">
+  <!-- Logo -->
+  <div class="flex items-center">
+    <img src="nasi-prop-logo-nobg.png" alt="Nasi Properties Logo" class="w-28 md:w-32">
+  </div>
+
+  <!-- Desktop Nav -->
+  <nav class="space-x-8 hidden md:flex items-center text-lg">
+    <a href="index.html" class="hover:text-[#0b2974] font-semibold">Home</a>
+    <a href="for-sale.html" class="hover:text-[#0b2974] font-semibold">Buy</a>
+    <a href="for-rent.html" class="hover:text-[#0b2974] font-semibold">Rent</a>
+    <a href="list-your-property.html" class="hover:text-[#0b2974] font-semibold">Sell</a>
+    <a href="about.html" class="text-[#0b2974] font-bold">About</a>
+    <a href="blog.html" class="hover:text-[#0b2974] font-semibold">Blog</a>
+    <a href="contact.html" class="hover:text-[#0b2974] font-semibold">Contact</a>
+  </nav>
+
+  <!-- Icons + Hamburger -->
+  <div class="flex items-center space-x-4">
+    <i class="fa-solid fa-magnifying-glass text-gray-600 cursor-pointer text-xl md:text-2xl"></i>
+    <i class="fa-solid fa-user text-gray-600 cursor-pointer hover:text-[#0b2974] text-xl md:text-2xl"></i>
+
+    <!-- Hamburger -->
+    <button id="menu-btn" class="md:hidden text-2xl text-[#0b2974] focus:outline-none">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col text-center py-6 space-y-4 md:hidden">
+    <a href="index.html" class="hover:text-[#0b2974] font-semibold">Home</a>
+    <a href="for-sale.html" class="hover:text-[#0b2974] font-semibold">Buy</a>
+    <a href="for-rent.html" class="hover:text-[#0b2974] font-semibold">Rent</a>
+    <a href="list-your-property.html" class="hover:text-[#0b2974] font-semibold">Sell</a>
+    <a href="about.html" class="hover:text-[#0b2974] font-semibold">About</a>
+    <a href="blog.html" class="hover:text-[#0b2974] font-semibold">Blog</a>
+    <a href="contact.html" class="hover:text-[#0b2974] font-semibold">Contact</a>
+  </div>
+</header>
+
+<!-- JS Toggle -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let isOpen = false;
+
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle('hidden', !isOpen);
+    menuBtn.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+</script>
+
+
+ <!-- Hero Section -->
+  <section class="bg-cover bg-center h-[40vh] flex items-center justify-center text-center"
+           style="background-image: url('hero.webp');">
+    <div class="bg-[#0b2974]/30 w-full h-full flex flex-col justify-center items-center text-white">
+      <h1 class="text-4xl font-bold mb-2">About Nasi Properties</h1>
+      <p class="text-lg max-w-xl mx-auto font-semibold">Experience. Integrity. Results.</p>
+    </div>
+  </section>
+
+  <!-- Company Overview -->
+  <section class="max-w-5xl mx-auto p-8 my-16 space-y-8">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold text-[#0b2974] mb-3">Who We Are</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Nasi Properties is a specialist residential real estate agency serving a broad spectrum of communities nationwide.
+        We deliver end-to-end support for sellers and buyers, grounded in ethics, market insight, and client-centred service.
+        Our approach blends digital reach with relationship-driven expertise, ensuring every transaction is handled with clarity and care.
+      </p>
+    </div>
+
+    <!-- Leadership -->
+    <div class="md:flex items-center gap-8">
+      <div class="flex-1">
+        <h3 class="text-xl font-semibold text-[#1b4ad8] mb-2">Leadership</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          <strong>Nolwazi Mdadane</strong> — Principal Agent & Founder<br>
+          With 21 years in residential real estate, Nolwazi brings seasoned market judgment, skilled negotiation,
+          and a calm, client-first approach. Her leadership sets our standard for integrity, communication, and results.
+        </p>
+      </div>
+      <div class="flex-1">
+        <img src="nolwazi.jpg" alt="Nolwazi Mdadane" class="rounded-xl shadow-md w-full object-cover h-auto">
+      </div>
+    </div>
+
+    <!-- Vision & Values -->
+    <div class="bg-[#f8faff] rounded-xl p-8 mt-10 shadow-inner">
+      <h3 class="text-xl font-semibold text-[#1b4ad8] mb-4">Vision & Values</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-bold text-[#0b2974] mb-1">Client-Centred</h4>
+          <p>Your objectives guide every step.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-[#0b2974] mb-1">Integrity</h4>
+          <p>Transparent, compliant, and professional.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-[#0b2974] mb-1">Growth</h4>
+          <p>Property decisions that build long-term value.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-[#0b2974] mb-1">Access</h4>
+          <p>Quality service for everyone we serve.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What We Do -->
+    <div>
+      <h3 class="text-2xl font-bold text-[#0b2974] mb-4">What We Do</h3>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Our services cover the full property journey. We also collaborate with trusted partners — such as bond originators and conveyancers —
+        for a seamless experience.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <ul class="space-y-2 text-gray-700">
+            <li><i class="fa-solid fa-house text-[#0b2974] mr-2"></i> Residential Sales — Pricing, marketing, offer management, and closing.</li>
+            <li><i class="fa-solid fa-user-tie text-[#0b2974] mr-2"></i> Buyer Representation — Personalised search, guided viewings, and negotiation strategy.</li>
+            <li><i class="fa-solid fa-scale-balanced text-[#0b2974] mr-2"></i> Valuations & Market Opinions — Evidence-based insights to price confidently.</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="space-y-2 text-gray-700">
+            <li><i class="fa-solid fa-chart-line text-[#0b2974] mr-2"></i> Investment & Growth Homes — Advisory on long-term value creation.</li>
+            <li><i class="fa-solid fa-handshake text-[#0b2974] mr-2"></i> Partner Network — Conveyancing, legal, and financial guidance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Market Approach -->
+    <div>
+      <h3 class="text-2xl font-bold text-[#0b2974] mb-4">Our Market Approach</h3>
+      <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2">
+        <li>Broad-based coverage across township and suburban markets.</li>
+        <li>Transparent, compliance-aligned processes for secure transactions.</li>
+        <li>Digital marketing blended with relationship-driven service.</li>
+        <li>Scalable systems supporting expansion into new regions.</li>
+      </ul>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div>
+      <h3 class="text-2xl font-bold text-[#0b2974] mb-4">Why Nasi Properties</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Resilience:</strong> Diversified approach supporting stability through cycles.</li>
+            <li><strong>Local Insight:</strong> Ground-level knowledge paired with professional service.</li>
+            <li><strong>Proven Results:</strong> Successful transactions and satisfied clients since 2004.</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Personal Attention:</strong> Dedicated guidance from first consultation to handover.</li>
+            <li><strong>Experience. Integrity. Results.</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- How We Work -->
+    <div>
+      <h3 class="text-2xl font-bold text-[#0b2974] mb-4">How We Work</h3>
+      <ol class="list-decimal list-inside text-gray-700 space-y-2">
+        <li><strong>Consult:</strong> Understand goals and timelines; align expectations.</li>
+        <li><strong>Prepare:</strong> Valuation, listing assets, and property readiness.</li>
+        <li><strong>Launch:</strong> Targeted, multi-channel marketing to qualified audiences.</li>
+        <li><strong>Negotiate:</strong> Offer management with transparent communication.</li>
+        <li><strong>Close:</strong> Coordinate conveyancing and handover smoothly.</li>
+      </ol>
+    </div>
+
+    <!-- Contact -->
+    <div class="bg-[#0b2974] text-white rounded-xl p-8 text-center mt-10">
+      <h3 class="text-2xl font-bold mb-3">Get in Touch</h3>
+      <p class="text-lg mb-2">Nasi Properties (Pty) Ltd — Residential Real Estate Sales</p>
+      <p>Primary Contact: <strong>Nolwazi Mdadane</strong>, Principal Agent & Founder</p>
+      <p class="mt-2">Mobile: <strong>076 914 3037</strong></p>
+      <p class="mt-4">Ready to buy or sell your property?<br>
+      <a href="contact.html" class="underline hover:text-gray-300">Reach out for a confidential consultation.</a></p>
+    </div>
+  </section>
+
+
+<!-- Newsletter Subscription -->
+<section class="bg-[#0b2974] text-white py-16">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold mb-4">Subscribe for Property Tips & Updates</h2>
+    <p class="text-blue-100 mb-8">
+      Join our mailing list to receive exclusive property insights, buyer guides, and investment advice every month.
+    </p>
+    <form class="flex flex-col md:flex-row items-center justify-center gap-4">
+      <input 
+        type="email" 
+        placeholder="Enter your email address" 
+        class="w-full md:w-2/3 px-4 py-3 rounded-lg text-gray-800 focus:outline-none"
+        required>
+      <button 
+        type="submit" 
+        class="bg-white text-[#0b2974] font-semibold px-6 py-3 rounded-lg hover:bg-blue-100 transition">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#0b2974] text-white py-10">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+    
+    <!-- Logo & About -->
+    <div>
+      <img src="nasi-prop-logo-nobg.png" alt="Nasi Properties Logo" class="w-32 mb-4">
+      <p class="text-blue-100 text-sm leading-relaxed">
+         We connect people with homes. Professional guidance, transparent process, and
+ growthfocused decisions.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="font-bold mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-blue-100">
+        <li><a href="for-sale.html" class="hover:text-white">Buy</a></li>
+        <li><a href="for-rent.html" class="hover:text-white">Rent</a></li>
+        <li><a href="sell.html" class="hover:text-white">Sell</a></li>
+        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div>
+      <h3 class="font-bold mb-4">Resources</h3>
+      <ul class="space-y-2 text-sm text-blue-100">
+        <li><a href="#" class="hover:text-white">News & Advice</a></li>
+        <li><a href="#" class="hover:text-white">Bond Calculator</a></li>
+        <li><a href="#" class="hover:text-white">FAQs</a></li>
+        <li><a href="#" class="hover:text-white">Terms & Privacy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="font-bold mb-4">Get in Touch</h3>
+      <ul class="space-y-2 text-sm text-blue-100">
+        <li><i class="fa-solid fa-envelope mr-2"></i><a href="mailto:info@nasiproperties.co.za" class="hover:text-white">info@nasiproperties.co.za</a></li>
+        <li><i class="fa-solid fa-phone mr-2"></i> +27 31 555 1234</li>
+        <li><i class="fa-solid fa-location-dot mr-2"></i> 10 The Castle, 20 Castle Road, Assagay</li>
+      </ul>
+      <div class="flex space-x-4 mt-4">
+        <a href="#" class="hover:text-blue-300"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-blue-300"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-300"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-blue-300"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-blue-800 mt-10 pt-6 text-center text-sm text-blue-200">
+    © <span id="year"></span> Nasi Properties. All rights reserved.
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+  </script>
+</footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
